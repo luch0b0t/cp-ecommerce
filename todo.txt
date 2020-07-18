@@ -1,0 +1,68 @@
+GOAL:
+
+-   Online store Products and People (Users) who can buy products. - Ecommerce.
+
+Features:
+
+-   Home Page with Products.
+-   Detail Page for each Product
+-   Shopping Cart.
+-   Checkout Page with Payment.
+-   User Auth (Register, Login, Profile View).
+-   Products and Categories.
+-   Protected Views / Permissions - Guest and User see and can do different things.
+-   Contact Page.
+-   Product Reviews + Recomendation system.
+-   Q&A Page.
+-   Filter / Search functionality.
+-   Fake Data Generator.
+
+Technologies:
+
+-   Django + SQLite + Basic frontend (bootstrap) + crispy forms
+
+Steps:
+
+1.   Create git repo, venv and .gitignore.
+2.   Install Django and create project.
+3.   Create apps - users / products / orders.
+4.   Create models (plan database).
+        4.1 Products app models:
+            - Products:
+                - name
+                - category (FK to category)
+                - description
+                - photo
+                - price
+
+            - Category
+                - name
+
+            - Reviews:
+                - user
+                - rating
+                - comment
+                - date_posted
+                - product
+
+        4.2 Orders app models:
+            - Orders:
+                - user
+                - product
+                - date
+                - quantity_of_product
+                - full_order (FK to FullOrder)
+
+            - FullOrder:
+                - user
+                - date
+
+5.  Views and templates....
+        5.1 Homepage with Category and products Listing.
+        5.2 Detail Page for products.
+        5.3 User Registration and Login and Detail.
+        5.4 Cart implementation.
+        5.5 Filters and Search.
+        5.6 Checkout page.
+        5.7 User Detail History of orders.
+        5.8 About / Pravacy etc.
